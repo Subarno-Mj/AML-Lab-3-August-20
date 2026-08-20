@@ -1,1 +1,281 @@
+Pandas Assignment
 
+1. Create a Pandas Series containing the marks: 78, 85, 92, 67, 88
+
+    Display:
+
+	Complete Series
+	Values
+	Index
+	Data type
+	Mean
+	Maximum
+	Minimum
+2. Create a Series containing:
+ 
+   	| Student | Marks |
+	| ------- | ----: |
+	| Asha    |    85 |
+	| Ravi    |    78 |
+	| Meena   |    92 |
+	| Kiran   |    74 |
+	| Arun    |    88 |
+	Display the marks of Meena.
+
+3. Create the following DataFrame:
+
+| Name  | Age | Department | Marks |
+| ----- | --: | ---------- | ----: |
+| Asha  |  22 | CSE        |    85 |
+| Ravi  |  23 | ECE        |    78 |
+| Meena |  21 | CSE        |    92 |
+| Kiran |  24 | ME         |    74 |
+| Arun  |  22 | ECE        |    88 |
+
+Display:
+
+	Complete DataFrame
+	First 3 rows
+	Last 2 rows
+	Shape
+	Column names
+	Data types
+4. Using the previous DataFrame, display:
+
+	info()
+	describe()
+	Number of rows
+	Number of columns
+
+5. Using df, display:
+
+	Name column
+	Marks column
+	Name and Marks together
+
+6. Display:
+
+	First row using iloc
+	Third row using iloc
+	Rows 1 to 3
+	Name and Marks columns using loc
+
+7. Find:
+
+	Students scoring above 80.
+	Students scoring between 75 and 90.
+	Students belonging to CSE.
+	CSE students scoring above 80.
+8. Display students belonging to either CSE or ECE.
+
+9. Add a new column called Result. Students scoring 75 or above should receive "Pass", otherwise "Fail".
+
+10. Assign grades according to:
+
+	| Marks | Grade |
+	| ----: | ----- |
+	|  ≥ 90 | A     |
+	|  ≥ 80 | B     |
+	|  ≥ 70 | C     |
+	|  < 70 | D     |
+
+11. Sort students:
+
+	By marks in ascending order.
+	By marks in descending order.
+	By Department and then Marks.
+
+12. Consider:
+
+data = {
+    "Name": ["Asha", "Ravi", "Meena", "Kiran", "Arun"],
+    "Age": [22, 23, np.nan, 24, 22],
+    "Marks": [85, np.nan, 92, 74, 88]
+}
+
+students = pd.DataFrame(data)
+
+Find:
+
+Missing values
+Number of missing values in each column
+Rows containing missing values
+
+
+13. Replace:
+
+	Missing Age with average Age
+	Missing Marks with average Marks
+
+14. Remove rows containing missing values.
+
+15. Consider:
+
+data = {
+    "Name": ["Asha", "Ravi", "Meena", "Asha", "Arun"],
+    "Marks": [85, 78, 92, 85, 88]
+}
+
+df2 = pd.DataFrame(data)
+
+Find duplicates:
+Display duplicate rows:
+Remove duplicates:
+
+16. Given:
+
+marks = pd.DataFrame({
+    "Student": ["A", "B", "C", "D", "E"],
+    "Marks": [78, 85, 92, 67, 88]
+})
+
+Calculate:
+
+Mean
+Median
+Maximum
+Minimum
+Standard deviation
+Sum
+
+17. Consider:
+
+data = {
+    "Name": [
+        "Asha", "Ravi", "Meena",
+        "Kiran", "Arun", "Divya"
+    ],
+
+    "Department": [
+        "CSE", "ECE", "CSE",
+        "ME", "ECE", "CSE"
+    ],
+
+    "Marks": [
+        85, 78, 92,
+        74, 88, 80
+    ]
+}
+
+df = pd.DataFrame(data)
+
+
+Find:
+Average marks by department
+Maximum marks by department
+Number of students in each department
+
+For each department, calculate:
+Mean
+Minimum
+Maximum
+Count
+
+18. Create:
+
+students = pd.DataFrame({
+    "StudentID": [101, 102, 103, 104],
+    "Name": ["Asha", "Ravi", "Meena", "Kiran"]
+})
+
+marks = pd.DataFrame({
+    "StudentID": [101, 102, 103, 104],
+    "Marks": [85, 78, 92, 74]
+})
+
+Combine both DataFrames using StudentID.
+
+
+19. Use the following dataset:
+
+data = {
+    "Name": [
+        "Asha", "Ravi", "Meena",
+        "Kiran", "Arun", "Divya",
+        "John", "Priya"
+    ],
+
+    "Department": [
+        "CSE", "ECE", "CSE",
+        "ME", "ECE", "CSE",
+        "ME", "ECE"
+    ],
+
+    "Attendance": [
+        92, 75, 96, 68,
+        82, 88, 72, 95
+    ],
+
+    "Internal": [
+        85, 72, 94, 65,
+        80, 86, 70, 91
+    ],
+
+    "FinalMarks": [
+        88, 74, 96, 62,
+        83, 89, 68, 93
+    ]
+}
+
+df = pd.DataFrame(data)
+
+
+Perform the following analysis:
+
+Display the first five records.
+Find the dimensions of the dataset.
+Find the average final mark.
+Find the highest-scoring student.
+Find the lowest-scoring student.
+Display students scoring above 80.
+Find average marks by department.
+Find students having attendance above 80%.
+Sort students by FinalMarks.
+Add a Result column: Pass if FinalMarks ≥ 70, otherwise Fail.
+Add a performance category:
+	≥90 → Excellent
+	≥80 → Very Good
+	≥70 → Good
+	<70 → Needs Improvement
+Find the department having the highest average FinalMarks.
+
+20. Create:
+
+employees = pd.DataFrame({
+    "Employee": [
+        "E01", "E02", "E03", "E04",
+        "E05", "E06", "E07", "E08"
+    ],
+
+    "Department": [
+        "IT", "HR", "IT", "Finance",
+        "HR", "Finance", "IT", "Finance"
+    ],
+
+    "Experience": [
+        5, 3, 7, 4,
+        6, 8, 2, 5
+    ],
+
+    "Salary": [
+        60000, 45000, 75000, 65000,
+        55000, 85000, 48000, 70000
+    ]
+})
+
+
+Determine:
+
+Average salary.
+Maximum and minimum salary.
+Employee receiving the highest salary.
+Employees earning above ₹60,000.
+Average salary for each department.
+Average experience by department.
+Number of employees in each department.
+Sort employees by salary.
+Find IT employees with more than 3 years of experience.
+Add a SalaryLevel column:
+	≥ ₹75,000 → High
+	₹50,000–₹74,999 → Medium
+	< ₹50,000 → Low
